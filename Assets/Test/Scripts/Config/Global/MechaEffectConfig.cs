@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Sirenix.OdinInspector;
 
 
 [CreateAssetMenu(fileName = "MechaLODEffectFile", menuName = "ScriptableObjects/Global/MechaEffectConfig", order = 1)]
@@ -13,23 +14,34 @@ public class MechaEffectConfig : ScriptableObject
 [System.Serializable]
 public class LODEffectRule
 {
-    public Keys LOD层级;
-    public EffectModelEnum 特效模;
-    public EffectContainer 特效挂槽;
+    [LabelText("LOD层级")]
+    public Keys LODLevel;
+    [LabelText("特效模")]
+    public EffectModelEnum EffectModel;
+    [LabelText("特效挂槽")]
+    public EffectContainer EffectModule;
 }
 
 public enum EffectModelEnum
 {
+    [LabelText("无")]
     无,
-    使用LOD0为特效模,
-    使用LOD1为特效模,
-    使用LOD2为特效模,
-    使用LOD3为特效模,
-    使用LOD4为特效模
+    [LabelText("使用LOD0为特效模")]
+    UsingLOD0,
+    [LabelText("使用LOD1为特效模")]
+    UsingLOD1,
+    [LabelText("使用LOD2为特效模")]
+    UsingLOD2,
+    [LabelText("使用LOD3为特效模")]
+    UsingLOD3,
+    [LabelText("使用LOD4为特效模")]
+    UsingLOD4
 }
 
 public enum EffectContainer
 {
-    通用_机体基础骨架,
-    武装装备骨架
+    [LabelText("通用_机体基础骨架")]
+    General,
+    [LabelText("武装装备骨架")]
+    Armed
 }

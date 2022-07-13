@@ -44,18 +44,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ab831d3b2aebb49a52b054621f9948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectconfig: {fileID: 0}
+  lod0:
+    UsingScene: 0
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 11
+  lod1:
+    UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 11
+  lod2:
+    UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 9
+  lod3:
+    UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 1
+  lod4:
+    UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 1
   LODGroup:
-  - LODLevel: 0
-    "\u4F7F\u7528\u573A\u666F": 0
-    "\u52A8\u4F5CRig\u7EA6\u675F": {fileID: 0}
-    "\u52A8\u4F5CIK": {fileID: 0}
-    "\u7279\u6548\u6A21": 0
-    "\u9634\u5F71\u6A21": 0
-    "\u903B\u8F91\u90E8\u4EF6": {fileID: 0}
-    "\u7279\u6548\u4EF6": {fileID: 0}
-    "\u706F\u5149\u8D34\u82B1\u5C42\u7EA7": 0
-  MechaConfigs:
+  - UsingScene: 0
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 11
+  - UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 11
+  - UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 9
+  - UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 1
+  - UsingScene: 1
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 1
+  MechaGlobalConfigs:
   - {fileID: 11400000, guid: 9a37c716dea4545458c274240d59413b, type: 2}
   - {fileID: 11400000, guid: 21df80e1039011242ac4ae47dec092f0, type: 2}
   - {fileID: 11400000, guid: 6db30a78b13ce1f46a3d962987558065, type: 2}
+  MechaFormalConfigs:
+  - {fileID: 11400000, guid: ec81e33a75c27994e91de2f5dbd7e1ea, type: 2}
+  - {fileID: 11400000, guid: 0b4432779e928034ba703dd4ccbabc37, type: 2}
+  - {fileID: 11400000, guid: ffd03e15032d3a34ebb7a07e93528607, type: 2}
+  - {fileID: 11400000, guid: 4944c95feb5c37a4c9ce082791e28a01, type: 2}

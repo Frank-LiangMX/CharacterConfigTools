@@ -15,10 +15,14 @@ public class MechaActionRigConfig : ScriptableObject
 [System.Serializable]
 public class LODRigRule
 {
-    public Keys LOD层级;
-    public MechaRigPart 部位;
-    public SettingPart 配置项;
-    public int 数量;
+    [LabelText("LOD层级")]
+    public Keys LODLevel;
+    [LabelText("部位")]
+    public MechaRigPartEnum RigPart;
+    [LabelText("配置项")]
+    public SettingPartEnum SettingPart;
+    [LabelText("数量")]
+    public int Count;
 }
 
 public enum Keys
@@ -31,14 +35,17 @@ public enum Keys
 }
 
 
-public enum MechaRigPart
+public enum MechaRigPartEnum
 {
-    机体,
-    武装1,
-    武装2
+    [LabelText("机体")]
+    Mecha,
+    [LabelText("武装1")]
+    Armed1,
+    [LabelText("武装2")]
+    Armed2
 }
 
-public enum SettingPart
+public enum SettingPartEnum
 {
     TransformationConstraint,
     LockedTrackConstraint,

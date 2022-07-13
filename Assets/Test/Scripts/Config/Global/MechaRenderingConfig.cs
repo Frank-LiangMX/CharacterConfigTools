@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using Sirenix.OdinInspector;
 
 
 [CreateAssetMenu(fileName = "MechaRenderingConfigFile", menuName = "ScriptableObjects/Global/MechaRenderingConfig", order = 1)]
@@ -13,30 +14,42 @@ public class MechaRenderingConfig : ScriptableObject
 [System.Serializable]
 public class LODRenderingRule
 {
-    public Keys LOD层级;
-    public LightDecalLayer 灯光贴花层级;
-    public ShadowModelEnum 阴影模;
-    public CharacterLight 角色灯光;
+    [LabelText("LOD层级")]
+    public Keys LODLevel;
+    [LabelText("灯光贴花层级")]
+    public LightDecalLayerEnum LightDecalLayer;
+    [LabelText("阴影模")]
+    public ShadowModelEnum ShadowModel;
+    [LabelText("角色灯光")]
+    public CharacterLightEnum CharacterLight;
 }
 
 public enum ShadowModelEnum
 {
-    模型自身阴影,
-    无阴影,
-    圆形假阴影投影,
-    使用LOD3为阴影模,
-    使用LOD1为阴影模
+    [LabelText("模型自身阴影")]
+    UseModelItself,
+    [LabelText("无阴影")]
+    None,
+    [LabelText("圆形假阴影投影")]
+    CircleFake,
+    [LabelText("使用LOD3为阴影模")]
+    UseLOD3,
+    [LabelText("使用LOD1为阴影模")]
+    UseLOD1
 }
 
-public enum CharacterLight
+public enum CharacterLightEnum
 {
-    格纳库灯光组,
-    灯光组1,
-    无
+    [LabelText("格纳库灯光组")]
+    FactoryLight,
+    [LabelText("灯光组1")]
+    Light1,
+    [LabelText("无")]
+    None
 }
 
 [System.Flags]
-public enum LightDecalLayer
+public enum LightDecalLayerEnum
 {
     LightLayerDefault = 1,
     LightLayerPlayer = 2,

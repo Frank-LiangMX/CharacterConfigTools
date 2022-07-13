@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4527962259254609489}
-  - component: {fileID: 8426376823765089323}
+  - component: {fileID: 6645661516870516024}
   m_Layer: 0
   m_Name: M1
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8426376823765089323
+--- !u!114 &6645661516870516024
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,13 +44,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ab831d3b2aebb49a52b054621f9948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  effectconfig: {fileID: 11400000, guid: 21df80e1039011242ac4ae47dec092f0, type: 2}
+  lod0:
+    UsingScene: 0
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 0
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 0
+  lod1:
+    UsingScene: 0
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 0
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 0
+  lod2:
+    UsingScene: 0
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 0
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 0
+  lod3:
+    UsingScene: 0
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 0
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 0
+  lod4:
+    UsingScene: 0
+    ActionRigConstraint: {fileID: 0}
+    actionIK: {fileID: 0}
+    EffectModel: 0
+    ShadowModel: 0
+    LogicPart: {fileID: 0}
+    EffectModule: {fileID: 0}
+    LightDecalLayer: 0
   LODGroup: []
   MechaGlobalConfigs:
   - {fileID: 11400000, guid: 9a37c716dea4545458c274240d59413b, type: 2}
   - {fileID: 11400000, guid: 21df80e1039011242ac4ae47dec092f0, type: 2}
   - {fileID: 11400000, guid: 6db30a78b13ce1f46a3d962987558065, type: 2}
-  MechaFormalConfigs:
-  - {fileID: 11400000, guid: 0b4432779e928034ba703dd4ccbabc37, type: 2}
-  - {fileID: 11400000, guid: ffd03e15032d3a34ebb7a07e93528607, type: 2}
-  - {fileID: 11400000, guid: 4944c95feb5c37a4c9ce082791e28a01, type: 2}
+  MechaFormalConfigs: []
