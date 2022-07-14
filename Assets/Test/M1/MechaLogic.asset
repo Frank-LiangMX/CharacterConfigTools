@@ -10,16 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c62510e52f5eb0a4cb44d106de6aaa9b, type: 3}
-  m_Name: M1_MechaLogicPartConfigFile
+  m_Name: MechaLogic
   m_EditorClassIdentifier: 
-  LODLogicPartRule:
-  - "LOD\u5C42\u7EA7": 0
-    "\u90E8\u4F4D": 0
-  - "LOD\u5C42\u7EA7": 1
-    "\u90E8\u4F4D": 0
-  - "LOD\u5C42\u7EA7": 2
-    "\u90E8\u4F4D": 0
-  - "LOD\u5C42\u7EA7": 3
-    "\u90E8\u4F4D": 0
-  - "LOD\u5C42\u7EA7": 4
-    "\u90E8\u4F4D": 0
+  LODLogicPartRule: []

@@ -1,99 +1,228 @@
-// AssetListExamplesComponent.cs
+Ôªø// AssetListExamplesComponent.cs
 using Sirenix.OdinInspector;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-[ExecuteAlways]
-public class MechaLODGroup : MonoBehaviour
+namespace CharacterLODConfig
 {
-    [TabGroup("LOD0")]
-    [HideLabel]
-    public LODStruct lod0;
-
-    [TabGroup("LOD1")]
-    [HideLabel]
-    public LODStruct lod1;
-
-    [TabGroup("LOD2")]
-    [HideLabel]
-    public LODStruct lod2;
-
-    [TabGroup("LOD3")]
-    [HideLabel]
-    public LODStruct lod3;
-
-    [TabGroup("LOD4")]
-    [HideLabel]
-    public LODStruct lod4;
-
-    [HideInInspector]
-    public List<LODStruct> LODGroup;
-
-    [FoldoutGroup("Config")]
-    [AssetList(AutoPopulate = true, Path = "Test/Global/")]
-    public List<ScriptableObject> MechaGlobalConfigs;
-
-    [FoldoutGroup("Config")]
-    //[AssetList(AutoPopulate = true, Path = "Test/M1/")]
-    public List<ScriptableObject> MechaFormalConfigs;
-
-
-    [Button(ButtonSizes.Large), GUIColor(0, 1, 0)]
-    [LabelText("ªÒ»°≈‰÷√–≈œ¢")]
-    private void GetConfigData()
+    [ExecuteAlways]
+    public class MechaLODGroup : MonoBehaviour
     {
-        if (MechaFormalConfigs.Count > 0)
+        [TabGroup("LOD0")]
+        [HideLabel]
+        public LODStruct lod0;
+
+        [TabGroup("LOD1")]
+        [HideLabel]
+        public LODStruct lod1;
+
+        [TabGroup("LOD2")]
+        [HideLabel]
+        public LODStruct lod2;
+
+        [TabGroup("LOD3")]
+        [HideLabel]
+        public LODStruct lod3;
+
+        [TabGroup("LOD4")]
+        [HideLabel]
+        public LODStruct lod4;
+
+        [HideInInspector]
+        public List<LODStruct> LODGroup;
+
+        [FoldoutGroup("Config")]
+        [AssetList(AutoPopulate = true, Path = "Art/Characters/Players/GlobalConfig/")]
+        public List<ScriptableObject> MechaGlobalConfigs;
+
+        [FoldoutGroup("Config")]
+        [ListDrawerSettings(DraggableItems = false)]
+        public List<ScriptableObject> MechaFormalConfigs;
+
+
+        [Button(ButtonSizes.Large), GUIColor(0, 1, 0)]
+        [LabelText("Ëé∑ÂèñÈÖçÁΩÆ‰ø°ÊÅØ")]
+        private void GetConfigData()
         {
-            string path = AssetDatabase.GetAssetPath(this);
-            Object obj = AssetDatabase.LoadAssetAtPath<Object>(path);
-            Test.Run(obj);
+            if (MechaFormalConfigs.Count > 0 && MechaFormalConfigs.Count > 0)
+            {
+                string path = AssetDatabase.GetAssetPath(this);
+                Object obj = AssetDatabase.LoadAssetAtPath<Object>(path);
+                RefreshMechaData.Run(obj);
 
-            lod0 = LODGroup[0];
-            lod1 = LODGroup[1];
-            lod2 = LODGroup[2];
-            lod3 = LODGroup[3];
-            lod4 = LODGroup[4];
+                lod0 = LODGroup[0];
+                lod1 = LODGroup[1];
+                lod2 = LODGroup[2];
+                lod3 = LODGroup[3];
+                lod4 = LODGroup[4];
+            }
+            else Debug.Log("Êó†FormalConfig");
         }
-        else Debug.Log("ŒﬁFormalConfig");
     }
+
+    [System.Serializable]
+    public class LODStruct
+    {
+        //[HideLabel]
+        //public Keys LODLevel;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("‰ΩøÁî®Âú∫ÊôØ")]
+        public UsingSceneEnum UsingScene;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("Âä®‰ΩúRigÁ∫¶Êùü")]
+        public Object ActionRigConstraint;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("Âä®‰ΩúIK")]
+        public Object actionIK;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÁâπÊïàÊ®°")]
+        public EffectModelEnum EffectModel;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("Èò¥ÂΩ±Ê®°")]
+        public ShadowModelEnum ShadowModel;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÈÄªËæëÈÉ®‰ª∂")]
+        public LogicPart[] LogicPart;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÁâπÊïà‰ª∂")]
+        public EffectPart[] EffectPart;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÁÅØÂÖâË¥¥Ëä±Â±ÇÁ∫ß")]
+        public LightDecalLayerEnum LightDecalLayer;
+    }
+
+    //buttonÊñπÊ≥ï
+    /*
+     * public int i;
+        [ReadOnly]
+        [Indent]
+        [LabelText("‰ΩøÁî®Âú∫ÊôØ")]
+        public UsingSceneEnum UsingScene;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("Âä®‰ΩúRigÁ∫¶Êùü")]
+        public Object ActionRigConstraint;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("Âä®‰ΩúIK")]
+        public Object actionIK;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÁâπÊïàÊ®°")]
+        public EffectModelEnum EffectModel;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("Èò¥ÂΩ±Ê®°")]
+        public ShadowModelEnum ShadowModel;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÈÄªËæëÈÉ®‰ª∂")]
+        public Object LogicPart;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÁâπÊïà‰ª∂")]
+        public Object EffectModule;
+
+        [ReadOnly]
+        [Indent]
+        [LabelText("ÁÅØÂÖâË¥¥Ëä±Â±ÇÁ∫ß")]
+        public LightDecalLayerEnum LightDecalLayer;
+
+
+
+        [ButtonGroup]
+        [Button(ButtonSizes.Large)]
+        public void Lod0()
+        {
+            i = 0;
+            UsingScene = LODGroup[i].UsingScene;
+            ActionRigConstraint = LODGroup[i].ActionRigConstraint;
+            actionIK = LODGroup[i].actionIK;
+            EffectModel = LODGroup[i].EffectModel;
+            ShadowModel = LODGroup[i].ShadowModel;
+            LogicPart = LODGroup[i].LogicPart;
+            EffectModule = LODGroup[i].EffectModule;
+            LightDecalLayer = LODGroup[i].LightDecalLayer;
+        }
+
+        [ButtonGroup]
+        public void Lod1()
+        {
+            i = 1;
+            UsingScene = LODGroup[i].UsingScene;
+            ActionRigConstraint = LODGroup[i].ActionRigConstraint;
+            actionIK = LODGroup[i].actionIK;
+            EffectModel = LODGroup[i].EffectModel;
+            ShadowModel = LODGroup[i].ShadowModel;
+            LogicPart = LODGroup[i].LogicPart;
+            EffectModule = LODGroup[i].EffectModule;
+            LightDecalLayer = LODGroup[i].LightDecalLayer;
+        }
+        [ButtonGroup]
+        public void Lod2()
+        {
+            i = 2;
+            UsingScene = LODGroup[i].UsingScene;
+            ActionRigConstraint = LODGroup[i].ActionRigConstraint;
+            actionIK = LODGroup[i].actionIK;
+            EffectModel = LODGroup[i].EffectModel;
+            ShadowModel = LODGroup[i].ShadowModel;
+            LogicPart = LODGroup[i].LogicPart;
+            EffectModule = LODGroup[i].EffectModule;
+            LightDecalLayer = LODGroup[i].LightDecalLayer;
+        }
+        [GUIColor(1,0,0)]
+        [ButtonGroup]
+        public void Lod3()
+        {
+            i = 3;
+            UsingScene = LODGroup[i].UsingScene;
+            ActionRigConstraint = LODGroup[i].ActionRigConstraint;
+            actionIK = LODGroup[i].actionIK;
+            EffectModel = LODGroup[i].EffectModel;
+            ShadowModel = LODGroup[i].ShadowModel;
+            LogicPart = LODGroup[i].LogicPart;
+            EffectModule = LODGroup[i].EffectModule;
+            LightDecalLayer = LODGroup[i].LightDecalLayer;
+        }
+        [GUIColor(0,1,0)]
+        [ButtonGroup]
+        public void Lod4()
+        {
+            i = 4;
+            UsingScene = LODGroup[i].UsingScene;
+            ActionRigConstraint = LODGroup[i].ActionRigConstraint;
+            actionIK = LODGroup[i].actionIK;
+            EffectModel = LODGroup[i].EffectModel;
+            ShadowModel = LODGroup[i].ShadowModel;
+            LogicPart = LODGroup[i].LogicPart;
+            EffectModule = LODGroup[i].EffectModule;
+            LightDecalLayer = LODGroup[i].LightDecalLayer;
+        }
+     */
 }
 
-[System.Serializable]
-public class LODStruct
-{
-    //[HideLabel]
-    //public Keys LODLevel;
 
-    [Indent]
-    [LabelText(" π”√≥°æ∞")]
-    public UsingSceneEnum UsingScene;
-
-    [Indent]
-    [LabelText("∂Ø◊˜Rig‘º ¯")]
-    public Object ActionRigConstraint;
-
-    [Indent]
-    [LabelText("∂Ø◊˜IK")]
-    public Object actionIK;
-
-    [Indent]
-    [LabelText("Ãÿ–ßƒ£")]
-    public EffectModelEnum EffectModel;
-
-    [Indent]
-    [LabelText("“ı”∞ƒ£")]
-    public ShadowModelEnum ShadowModel;
-
-    [Indent]
-    [LabelText("¬ﬂº≠≤øº˛")]
-    public Object LogicPart;
-
-    [Indent]
-    [LabelText("Ãÿ–ßº˛")]
-    public Object EffectModule;
-
-    [Indent]
-    [LabelText("µ∆π‚Ã˘ª®≤„º∂")]
-    public LightDecalLayerEnum LightDecalLayer;
-}

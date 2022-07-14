@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4527962259254609489}
-  - component: {fileID: 6645661516870516024}
+  - component: {fileID: -4237710299168387431}
   m_Layer: 0
   m_Name: M1
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6645661516870516024
+--- !u!114 &-4237710299168387431
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,53 +45,139 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lod0:
-    UsingScene: 0
+    UsingScene: 1
     ActionRigConstraint: {fileID: 0}
     actionIK: {fileID: 0}
-    EffectModel: 0
+    EffectModel: 1
     ShadowModel: 0
-    LogicPart: {fileID: 0}
-    EffectModule: {fileID: 0}
-    LightDecalLayer: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 11
   lod1:
-    UsingScene: 0
+    UsingScene: 1
     ActionRigConstraint: {fileID: 0}
     actionIK: {fileID: 0}
-    EffectModel: 0
+    EffectModel: 2
     ShadowModel: 0
-    LogicPart: {fileID: 0}
-    EffectModule: {fileID: 0}
-    LightDecalLayer: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 11
   lod2:
     UsingScene: 0
     ActionRigConstraint: {fileID: 0}
     actionIK: {fileID: 0}
-    EffectModel: 0
+    EffectModel: 3
     ShadowModel: 0
-    LogicPart: {fileID: 0}
-    EffectModule: {fileID: 0}
-    LightDecalLayer: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 3
   lod3:
-    UsingScene: 0
+    UsingScene: 1
     ActionRigConstraint: {fileID: 0}
     actionIK: {fileID: 0}
-    EffectModel: 0
+    EffectModel: 4
     ShadowModel: 0
-    LogicPart: {fileID: 0}
-    EffectModule: {fileID: 0}
-    LightDecalLayer: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 1
   lod4:
     UsingScene: 0
     ActionRigConstraint: {fileID: 0}
     actionIK: {fileID: 0}
-    EffectModel: 0
+    EffectModel: 5
     ShadowModel: 0
-    LogicPart: {fileID: 0}
-    EffectModule: {fileID: 0}
-    LightDecalLayer: 0
-  LODGroup: []
-  MechaGlobalConfigs:
-  - {fileID: 11400000, guid: 9a37c716dea4545458c274240d59413b, type: 2}
-  - {fileID: 11400000, guid: 21df80e1039011242ac4ae47dec092f0, type: 2}
-  - {fileID: 11400000, guid: 6db30a78b13ce1f46a3d962987558065, type: 2}
-  MechaFormalConfigs: []
+    LogicPart:
+    - LogicPartName: 55
+      LogicPartModel: 66
+    EffectPart:
+    - EffectpartChinese: 11
+      EffectpartName: 22
+    LightDecalLayer: 1
+  LODGroup:
+  - UsingScene: 1
+    ActionRigConstraint: {fileID: 11400000, guid: ce33307848924be4683341c26652354c, type: 2}
+    actionIK: {fileID: 11400000, guid: 80140d415f3579a4083803b53a6318d2, type: 2}
+    EffectModel: 1
+    ShadowModel: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 11
+  - UsingScene: 1
+    ActionRigConstraint: {fileID: 11400000, guid: b77ced3951c1ac543b94c3681b523a2c, type: 2}
+    actionIK: {fileID: 11400000, guid: b77ced3951c1ac543b94c3681b523a2c, type: 2}
+    EffectModel: 2
+    ShadowModel: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 11
+  - UsingScene: 0
+    ActionRigConstraint: {fileID: 11400000, guid: 80140d415f3579a4083803b53a6318d2, type: 2}
+    actionIK: {fileID: 11400000, guid: ce33307848924be4683341c26652354c, type: 2}
+    EffectModel: 3
+    ShadowModel: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 3
+  - UsingScene: 1
+    ActionRigConstraint: {fileID: 11400000, guid: b77ced3951c1ac543b94c3681b523a2c, type: 2}
+    actionIK: {fileID: 11400000, guid: 80140d415f3579a4083803b53a6318d2, type: 2}
+    EffectModel: 4
+    ShadowModel: 0
+    LogicPart:
+    - LogicPartName: 
+      LogicPartModel: 
+    - LogicPartName: 
+      LogicPartModel: 
+    EffectPart:
+    - EffectpartChinese: 
+      EffectpartName: 
+    LightDecalLayer: 1
+  - UsingScene: 0
+    ActionRigConstraint: {fileID: 11400000, guid: b77ced3951c1ac543b94c3681b523a2c, type: 2}
+    actionIK: {fileID: 11400000, guid: d0bb8adde4b80a24bbc85377a55217f6, type: 2}
+    EffectModel: 5
+    ShadowModel: 0
+    LogicPart:
+    - LogicPartName: 55
+      LogicPartModel: 66
+    EffectPart:
+    - EffectpartChinese: 11
+      EffectpartName: 22
+    LightDecalLayer: 1
+  MechaGlobalConfigs: []
+  MechaFormalConfigs:
+  - {fileID: 11400000, guid: 80140d415f3579a4083803b53a6318d2, type: 2}
+  - {fileID: 11400000, guid: bb9be9a3b8e871c42a4fa3b275cd1cf0, type: 2}
+  - {fileID: 11400000, guid: b77ced3951c1ac543b94c3681b523a2c, type: 2}
+  - {fileID: 11400000, guid: ce33307848924be4683341c26652354c, type: 2}
+  - {fileID: 11400000, guid: d0bb8adde4b80a24bbc85377a55217f6, type: 2}
